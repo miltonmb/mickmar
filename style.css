@@ -300,3 +300,11 @@ body {
     margin-top: -90px;
     width: 100%;
 }
+
+.center-6 {
+    display: block;
+    margin-left: 0px;
+    margin-right: auto;
+    margin-top: -90px;
+    width: 100%;
+}

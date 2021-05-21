@@ -1,11 +1,34 @@
 function next(x) {
-    window.location.href = "http://127.0.0.1:5500/" + x + ".html";
+  url = window.location.href
+  console.log(x)
+  if (parseInt(x) > 1) {
+    console.log("hola")
+    str = url.replace((parseInt(x) - 1) + "", x)
+    console.log(str)
+    window.location.href = str
+  } else {
+    window.location.href = url + x + ".html";
+  }
+
+
 }
 
-function answer(resp) {
-    if (resp === "si") {
-        window.location.href = "https://www.youtube.com/watch?v=39o-RH2OlCU";
-    } else {
-        window.location.href = "https://miltonmb.github.io/valeriaproject/" + "6" + ".html";
+function before(x) {
+  url = window.location.href
+  str = url.replace((parseInt(x) + 1) + "", x)
+  window.location.href = str
+}
+
+function answer(resp,id) {
+  if (resp === "si") {
+     url = window.location.href
+     str = url.replace("11", "12")
+    window.location.href = str
+  } else {
+    if(id=="no"){
+      document.getElementById(id).innerHTML = "No presiones aqui porfavor :(";
+    }else{
+      document.getElementById(id).innerHTML = "Hazme casoo!, ya presiona los otros porfavoh";
     }
+  }
 }
